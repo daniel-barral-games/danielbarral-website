@@ -1,0 +1,136 @@
+<html>
+
+    <head>
+
+        <title>Daniel Barral - Games</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+                margin: 0px;
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+            }
+            .mainLayout {
+                display: grid;
+                height: 100vh;
+                grid-gap: 0px;
+                grid-template-rows: auto auto 1fr;
+            }
+            .gamesGrid {
+                display: grid;
+                grid-row-gap: 10px;
+                padding: 10px;
+            }
+            .gameDiv {
+                text-align: left;
+                background-color: #dddddd;
+                padding: 10px;
+            }
+            .gameScreenshot {
+                width: 256;
+                height: 150;
+                padding-top: 5px;
+            }
+            .header {
+                background-color: #dddddd;
+            }
+            .menu {
+                background-color: #cccccc;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: 1fr auto auto auto auto 1fr;
+            }
+            .menu > div > a {
+                text-decoration: none;
+                font-weight: bold;
+                /*color: black;*/
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <div class="mainLayout">
+            <div class="header"><h1>Daniel Barral</h1></div>
+            <div class="menu">
+                <div></div>
+                <div><a href="/">Home</a></div>
+                <div><a href="/games">Games</a></div>
+                <div><a href="/easy-game-maker">Easy Game Maker</a></div>
+                <div><a href="/draw-js">DrawJS</a></div>
+                <div></div>
+            </div>
+            <div class="content">
+                <h2>Games</h2>
+
+                <p>Some games that I developed.</p>
+
+                <div class="gamesGrid">
+                    <div class="gameDiv">
+                        <h3>Pendulum Game</h3>
+                        <img src="img/game-images/pendulum/001.png" class="gameScreenshot">
+                        <img src="img/game-images/pendulum/004.png" class="gameScreenshot">
+                        <img src="img/game-images/pendulum/009.png" class="gameScreenshot">
+                        <p>In this game you control a pendulum with the mouse. You must collect stars to score points and avoid the spike balls.</p>
+                        <p>There are 10 different levels.</p>
+                        <p>You can play the game here: <a href="https://danielbarral.itch.io/pendulum-game">Pendulum Game</a></p>
+                    </div>
+                    <div class="gameDiv">
+                        <h3>Infinite Maze</h3>
+                        <img src="img/game-images/infinite-maze/001.png" class="gameScreenshot">
+                        <img src="img/game-images/infinite-maze/002.png" class="gameScreenshot">
+                        <img src="img/game-images/infinite-maze/004.png" class="gameScreenshot">
+                        <p>In this game you wake up in an infinite corridor, with infinite doors. Each door leads you to a different dimension, inside an infinite maze in every direction.</p>
+                        <p>You can play the game here: <a href="https://danielbarral.itch.io/infinite-maze-game">Infinite Maze</a></p>
+                    </div>
+                    <div class="gameDiv">
+                        <h3>Many Directions</h3>
+                        <img src="img/game-images/many-directions/logo012.png" class="gameScreenshot">
+                        <img src="img/game-images/many-directions/004.png" class="gameScreenshot">
+                        <img src="img/game-images/many-directions/012.png" class="gameScreenshot">
+                        <p>In this mind-bending game you control many arrows at the same time, each one pointing to a different direction.</p>
+                        <p>I created this game initially for a game jam on itch.io, but then I continued improving.</p>
+                        <p>You can play the game here: <a href="https://danielbarral.itch.io/many-directions">Many Directions</a></p>
+                    </div>
+                    <div class="gameDiv">
+                        <h3>Ball Bounce Saga</h3>
+                        <img src="img/game-images/ball-bounce-saga/001.png" class="gameScreenshot">
+                        <img src="img/game-images/ball-bounce-saga/003.png" class="gameScreenshot">
+                        <img src="img/game-images/ball-bounce-saga/004.png" class="gameScreenshot">
+                        <p>Bounce and avoid the spikes in 50 different levels.</p>
+                        <p>Collect coins to buy power ups in the store.</p>
+                        <p>You can play the game here: <a href="https://danielbarral.itch.io/ball-bounce-saga">Ball Bounce Saga</a></p>
+                    </div>
+                    <div class="gameDiv">
+                        <h3>Ball Bounce Mania</h3>
+                        <img src="img/game-images/ball-bounce-mania/ball-bounce-mania.png" class="gameScreenshot">
+                        <img src="img/game-images/ball-bounce-mania/screenshot-01.png" class="gameScreenshot">
+                        <img src="img/game-images/ball-bounce-mania/screenshot-03.png" class="gameScreenshot">
+                        <p>This is a simple and addictive game.</p>
+                        <p>You have to bounce and avoid the spikes.</p>
+                        <p>5 different levels.</p>
+                        <p>You can play the game here: <a href="https://danielbarral.itch.io/ball-bounce-mania">Ball Bounce Mania</a></p>
+                    </div>
+                    <div class="gameDiv">
+                        <h3>Jump Ball</h3>
+                        <img src="img/game-images/jump-ball/title-screen-02.png" class="gameScreenshot">
+                        <img src="img/game-images/jump-ball/screenshot-04.png" class="gameScreenshot">
+                        <img src="img/game-images/jump-ball/screenshot-08.png" class="gameScreenshot">
+                        <p>This was the first game that I created in Godot.</p>
+                        <p>It's an endless running game with procedurally generated levels.</p>
+                        <p>You can play the game here: <a href="https://danielbarral.itch.io/jump-ball">Jump Ball</a></p>
+                    </div>
+                </div>
+
+                <p>I also have an YouTube channel where I publish gameplay videos:</p>
+
+                <p><a href="https://www.youtube.com/channel/UC26dj3IuvCdrWpKaI6dYDrA">https://www.youtube.com/channel/UC26dj3IuvCdrWpKaI6dYDrA</a></p>
+            
+            </div>
+        </div>
+    </body>
+    
+</html>
