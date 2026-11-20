@@ -11,6 +11,7 @@ It is a static site (plain HTML and CSS, no build step) hosted on GitHub Pages. 
 | `index.html` | Home (`/`) |
 | `games.html` | Games (`/games`), with screenshots and itch.io links |
 | `easy-game-maker.html` | [EasyGameMaker](https://www.easygamemaker.com) (`/easy-game-maker`) |
+| `create-online-games.html` | [Create Online Games](https://www.createonlinegames.com) (`/create-online-games`) |
 | `draw-js.html` | [DrawJS](https://drawjs.app) (`/draw-js`) |
 | `image-online-tools.html` | [ImageOnlineTools](https://www.imageonlinetools.com) (`/image-online-tools`) |
 | `style.css` | Styles shared by every page |
