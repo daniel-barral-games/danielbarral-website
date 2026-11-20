@@ -14,6 +14,7 @@ It is a static site (plain HTML and CSS, no build step) hosted on GitHub Pages. 
 | `create-online-games.html` | [Create Online Games](https://www.createonlinegames.com) (`/create-online-games`) |
 | `draw-js.html` | [DrawJS](https://drawjs.app) (`/draw-js`) |
 | `image-online-tools.html` | [ImageOnlineTools](https://www.imageonlinetools.com) (`/image-online-tools`) |
+| `max-online-tools.html` | [Max Online Tools](https://www.maxonlinetools.com) (`/max-online-tools`) |
 | `style.css` | Styles shared by every page |
 | `img/` | Product logos, and game screenshots in `img/game-images/<game>/` |
 
