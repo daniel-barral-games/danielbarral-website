@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.mainLayout {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto auto 1fr;
+}
+
+.header {
+    background-color: #dddddd;
+    padding: 0 16px;
+}
+
+.menu {
+    background-color: #cccccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 20px;
+    padding: 4px 16px;
+}
+
+.menu > div > a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content {
+    padding: 0 16px;
+}
+
+/* Keep logos and screenshots from overflowing narrow screens. */
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Games page */
+.gamesGrid {
+    display: grid;
+    row-gap: 10px;
+    padding: 10px 0;
+}
+
+.gameDiv {
+    text-align: left;
+    background-color: #dddddd;
+    padding: 10px;
+}
+
+.gameDiv > img.gameScreenshot {
+    width: 512px;
+    aspect-ratio: 512 / 300;
+    object-fit: contain;
+    padding-top: 5px;
+}
