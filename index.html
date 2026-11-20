@@ -25,40 +25,138 @@
 
     <body>
         <div class="mainLayout">
-            <div class="header"><h1>Daniel Barral</h1></div>
-            <div class="menu">
-                <div><a href="/">Home</a></div>
-                <div><a href="/games">Games</a></div>
-                <div><a href="/easy-game-maker">Easy Game Maker</a></div>
-                <div><a href="/create-online-games">Create Online Games</a></div>
-                <div><a href="/draw-js">DrawJS</a></div>
-                <div><a href="/image-online-tools">ImageOnlineTools</a></div>
-                <div><a href="/max-online-tools">Max Online Tools</a></div>
-            </div>
-            <div class="content">
 
-                <p>I'm Daniel Barral, developer of Easy Game Maker, Create Online Games, DrawJS, ImageOnlineTools, Max Online Tools and games.</p>
+            <header class="siteHeader">
+                <div class="wrap headerInner">
+                    <a class="brand" href="/"><img src="favicon.svg" alt="" width="30" height="30">Daniel Barral</a>
+                    <nav class="menu" aria-label="Main">
+                        <a href="/" aria-current="page">Home</a>
+                        <a href="/games">Games</a>
+                        <a href="/easy-game-maker">Easy Game Maker</a>
+                        <a href="/create-online-games">Create Online Games</a>
+                        <a href="/draw-js">DrawJS</a>
+                        <a href="/image-online-tools">ImageOnlineTools</a>
+                        <a href="/max-online-tools">Max Online Tools</a>
+                    </nav>
+                </div>
+            </header>
 
-                <h2>Easy Game Maker</h2>
-                <p><a href="https://www.easygamemaker.com">Easy Game Maker</a> is a website that allows you to create your own online games.</p>
+            <main class="wrap content">
 
-                <h2>Create Online Games</h2>
-                <p><a href="https://www.createonlinegames.com">Create Online Games</a> is a free online game maker that lets you create games with no coding, starting from ready-to-play game templates.</p>
+                <section class="hero">
+                    <h1>Hi, I'm Daniel Barral</h1>
+                    <p class="lead">I develop online game makers, image editors and browser tools, and I make games.</p>
+                </section>
 
-                <h2>DrawJS</h2>
-                <p><a href="https://drawjs.app">DrawJS</a> is a powerful online image editor and drawing tool.</p>
+                <section class="section">
+                    <div class="sectionHeader">
+                        <h2>Projects</h2>
+                    </div>
 
-                <h2>ImageOnlineTools</h2>
-                <p><a href="https://www.imageonlinetools.com/">ImageOnlineTools</a> is a collection of online image editor and image generator tools.</p>
+                    <div class="cardGrid">
 
-                <h2>Max Online Tools</h2>
-                <p><a href="https://www.maxonlinetools.com/">Max Online Tools</a> is a collection of free online audio, video, browser, file and hardware test tools.</p>
+                        <article class="card">
+                            <div class="logoPlate"><img src="img/easy-game-maker-logo.png" alt="" width="301" height="68"></div>
+                            <div class="cardBody">
+                                <h3><a href="/easy-game-maker">Easy Game Maker</a></h3>
+                                <p>A website that allows you to create your own online games, with a physics engine and visual programming.</p>
+                            </div>
+                            <div class="actions">
+                                <a class="button" href="https://www.easygamemaker.com" aria-label="Open Easy Game Maker">Open</a>
+                                <a class="button secondary" href="/easy-game-maker" aria-label="More about Easy Game Maker">More</a>
+                            </div>
+                        </article>
 
-                <h2>Games</h2>
-                <p>See <a href="/games">my games</a>, or play them all at <a href="https://danielbarral.itch.io">itch.io</a>.</p>
+                        <article class="card">
+                            <div class="logoPlate"><img src="img/create-online-games-logo.png" alt="" width="712" height="141"></div>
+                            <div class="cardBody">
+                                <h3><a href="/create-online-games">Create Online Games</a></h3>
+                                <p>A free online game maker that lets you create games with no coding, starting from ready-to-play game templates.</p>
+                            </div>
+                            <div class="actions">
+                                <a class="button" href="https://www.createonlinegames.com" aria-label="Open Create Online Games">Open</a>
+                                <a class="button secondary" href="/create-online-games" aria-label="More about Create Online Games">More</a>
+                            </div>
+                        </article>
 
-            </div>
+                        <article class="card">
+                            <div class="logoPlate"><img src="img/drawjs-logo-02.png" alt="" width="383" height="104"></div>
+                            <div class="cardBody">
+                                <h3><a href="/draw-js">DrawJS</a></h3>
+                                <p>A powerful online image editor and drawing tool.</p>
+                            </div>
+                            <div class="actions">
+                                <a class="button" href="https://drawjs.app" aria-label="Open DrawJS">Open</a>
+                                <a class="button secondary" href="/draw-js" aria-label="More about DrawJS">More</a>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="logoPlate"><img src="img/image-online-tools-logo.png" alt="" width="456" height="71"></div>
+                            <div class="cardBody">
+                                <h3><a href="/image-online-tools">ImageOnlineTools</a></h3>
+                                <p>A collection of online image editor and image generator tools.</p>
+                            </div>
+                            <div class="actions">
+                                <a class="button" href="https://www.imageonlinetools.com/" aria-label="Open ImageOnlineTools">Open</a>
+                                <a class="button secondary" href="/image-online-tools" aria-label="More about ImageOnlineTools">More</a>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="logoPlate"><img src="img/max-online-tools-logo.png" alt="" width="295" height="61"></div>
+                            <div class="cardBody">
+                                <h3><a href="/max-online-tools">Max Online Tools</a></h3>
+                                <p>A collection of free online audio, video, browser, file and hardware test tools.</p>
+                            </div>
+                            <div class="actions">
+                                <a class="button" href="https://www.maxonlinetools.com/" aria-label="Open Max Online Tools">Open</a>
+                                <a class="button secondary" href="/max-online-tools" aria-label="More about Max Online Tools">More</a>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="sectionHeader">
+                        <h2>Games</h2>
+                        <a href="/games">See all games →</a>
+                    </div>
+
+                    <div class="tileGrid">
+                        <a class="tile" href="https://danielbarral.itch.io/diep-singleplayer">
+                            <img src="img/game-images/diep-singleplayer/diep-singleplayer.webp" alt="" width="1024" height="600" loading="lazy">
+                            <span>Diep Singleplayer</span>
+                        </a>
+                        <a class="tile" href="https://danielbarral.itch.io/arrows">
+                            <img src="img/game-images/arrows/arrows.webp" alt="" width="1024" height="600" loading="lazy">
+                            <span>Arrows</span>
+                        </a>
+                        <a class="tile" href="https://danielbarral.itch.io/pendulum-game">
+                            <img src="img/game-images/pendulum/001.webp" alt="" width="1024" height="600" loading="lazy">
+                            <span>Pendulum Game</span>
+                        </a>
+                        <a class="tile" href="https://danielbarral.itch.io/many-directions">
+                            <img src="img/game-images/many-directions/logo012.webp" alt="" width="1024" height="600" loading="lazy">
+                            <span>Many Directions</span>
+                        </a>
+                    </div>
+                </section>
+
+            </main>
+
+            <footer class="siteFooter">
+                <div class="wrap footerInner">
+                    <p>© 2026 Daniel Barral</p>
+                    <nav class="footerLinks" aria-label="Elsewhere">
+                        <a href="https://danielbarral.itch.io">itch.io</a>
+                        <a href="https://www.youtube.com/@danielbarralgames">YouTube</a>
+                    </nav>
+                </div>
+            </footer>
+
         </div>
     </body>
-    
+
 </html>

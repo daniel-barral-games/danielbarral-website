@@ -25,36 +25,53 @@
 
     <body>
         <div class="mainLayout">
-            <div class="header"><h1>Daniel Barral</h1></div>
-            <div class="menu">
-                <div><a href="/">Home</a></div>
-                <div><a href="/games">Games</a></div>
-                <div><a href="/easy-game-maker">Easy Game Maker</a></div>
-                <div><a href="/create-online-games">Create Online Games</a></div>
-                <div><a href="/draw-js">DrawJS</a></div>
-                <div><a href="/image-online-tools">ImageOnlineTools</a></div>
-                <div><a href="/max-online-tools">Max Online Tools</a></div>
-            </div>
-            <div class="content">
 
-                <p><a href="https://www.easygamemaker.com"><img src="img/easy-game-maker-logo.png" alt="Easy Game Maker"></a></p>
+            <header class="siteHeader">
+                <div class="wrap headerInner">
+                    <a class="brand" href="/"><img src="favicon.svg" alt="" width="30" height="30">Daniel Barral</a>
+                    <nav class="menu" aria-label="Main">
+                        <a href="/">Home</a>
+                        <a href="/games">Games</a>
+                        <a href="/easy-game-maker" aria-current="page">Easy Game Maker</a>
+                        <a href="/create-online-games">Create Online Games</a>
+                        <a href="/draw-js">DrawJS</a>
+                        <a href="/image-online-tools">ImageOnlineTools</a>
+                        <a href="/max-online-tools">Max Online Tools</a>
+                    </nav>
+                </div>
+            </header>
 
-                <p><a href="https://www.easygamemaker.com">Easy Game Maker</a> is a website that allows you to create your own online games.</p>
+            <main class="wrap content">
+                <article class="product">
+                    <h1><a class="logoPlate" href="https://www.easygamemaker.com"><img src="img/easy-game-maker-logo.png" alt="Easy Game Maker" width="301" height="68"></a></h1>
+                    <div class="productBody">
+                        <p class="lead">Easy Game Maker is a website that allows you to create your own online games.</p>
+                        <p>It's a game engine, and you create game logic using visual programming.</p>
+                        <h2>Features include</h2>
+                        <ul class="chips">
+                            <li>Physics engine (Matter.js)</li>
+                            <li>Visual programming with blocks</li>
+                            <li>Artificial intelligence extension (Neuroevolution)</li>
+                        </ul>
+                        <div class="actions">
+                            <a class="button" href="https://www.easygamemaker.com">Go to easygamemaker.com</a>
+                            <a class="button secondary" href="https://www.youtube.com/@easygamemaker">YouTube tutorials</a>
+                        </div>
+                    </div>
+                </article>
+            </main>
 
-                <p>It's a game engine that has physics engine (Matter.js), visual programming (with blocks), artificial intelligence extension (Neuroevolution) and more.</p>
+            <footer class="siteFooter">
+                <div class="wrap footerInner">
+                    <p>© 2026 Daniel Barral</p>
+                    <nav class="footerLinks" aria-label="Elsewhere">
+                        <a href="https://danielbarral.itch.io">itch.io</a>
+                        <a href="https://www.youtube.com/@danielbarralgames">YouTube</a>
+                    </nav>
+                </div>
+            </footer>
 
-                <p>You can create game logic using visual programming.</p>
-
-                <p><a href="https://www.easygamemaker.com">https://www.easygamemaker.com</a></p>
-
-                <br>
-
-                <p>There is also a YouTube channel for Easy Game Maker tutorials:</p>
-
-                <p><a href="https://www.youtube.com/@easygamemaker">https://www.youtube.com/@easygamemaker</a></p>
-
-            </div>
         </div>
     </body>
-    
+
 </html>

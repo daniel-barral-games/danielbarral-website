@@ -23,7 +23,8 @@ The menu links leave off `.html` (for example `/games`). GitHub Pages serves `ga
 
 ## Editing
 
-- **Add a game:** put its screenshots in `img/game-images/<game>/` as WebP, then copy one of the `<div class="gameDiv">` blocks in `games.html`. Give each image an `alt` describing it, and `loading="lazy"`. To convert a PNG: `ffmpeg -i shot.png -c:v libwebp -quality 90 shot.webp`.
+- **Add a game:** put its screenshots in `img/game-images/<game>/` as WebP, then copy one of the `<article class="game">` blocks in `games.html`. The main image and the first thumbnail use the same file; mark that thumbnail `aria-pressed="true"` and the rest `"false"`. Give each image an `alt` describing it, and `loading="lazy"`. To convert a PNG: `ffmpeg -i shot.png -c:v libwebp -quality 90 shot.webp`. You can also add a tile to the Games section in `index.html` (the home page shows four).
 - **Each page's `<head>`** has a meta description and link-preview (Open Graph) tags with that page's URL. Update them when you change a page or add one.
-- **Add a page:** copy an existing page, and add its link to the `<div class="menu">` block in **every** page. The menu is repeated in each file.
+- **Add a page:** copy an existing page (a product page such as `draw-js.html` is the simplest), and add its link to the `<nav class="menu">` block in **every** page. The header and footer are repeated in each file. On the new page, move `aria-current="page"` to its own menu link, which highlights it. For a new product, also add a card to the Projects grid in `index.html`.
+- **Colors** are set as variables at the top of `style.css`, once for light mode and once for dark mode (the site follows the visitor's system setting).
 - **Preview locally:** run `python -m http.server` in the repo folder and open http://localhost:8000.

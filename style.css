@@ -1,61 +1,526 @@
+/* ---------- Colors (light, then dark) ---------- */
+
+:root {
+    color-scheme: light dark;
+    --bg: #f5f6f8;
+    --surface: #ffffff;
+    --surface-2: #eef0f4;
+    --text: #1b1e24;
+    --muted: #5c6370;
+    --border: #dfe3ea;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-soft: rgba(37, 99, 235, 0.10);
+    --accent-text: #ffffff;
+    --shadow: 0 1px 2px rgba(16, 24, 40, 0.05), 0 4px 14px rgba(16, 24, 40, 0.06);
+    --radius: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0f1115;
+        --surface: #181b21;
+        --surface-2: #22262e;
+        --text: #e8eaee;
+        --muted: #a0a7b4;
+        --border: #2b3039;
+        --accent: #6d9bff;
+        --accent-hover: #8fb2ff;
+        --accent-soft: rgba(109, 155, 255, 0.14);
+        --accent-text: #0b1020;
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', system-ui, sans-serif;
     font-weight: 400;
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text);
 }
 
-.mainLayout {
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: auto auto 1fr;
-}
-
-.header {
-    background-color: #dddddd;
-    padding: 0 16px;
-}
-
-.menu {
-    background-color: #cccccc;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4px 20px;
-    padding: 4px 16px;
-}
-
-.menu > div > a {
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.content {
-    padding: 0 16px;
-}
-
-/* Keep logos and screenshots from overflowing narrow screens. */
-.content img {
+img {
     max-width: 100%;
     height: auto;
 }
 
-/* Games page */
-.gamesGrid {
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+.mainLayout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.content {
+    flex: 1;
+    padding-top: 32px;
+    padding-bottom: 56px;
+}
+
+.lead {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 680px;
+}
+
+/* ---------- Header and menu ---------- */
+
+.siteHeader {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.headerInner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.brand:hover {
+    color: var(--text);
+}
+
+.brand img {
+    width: 30px;
+    height: 30px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.menu a {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: var(--text);
+    background: var(--surface-2);
+}
+
+.menu a[aria-current="page"] {
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+
+/* Keep the header in view on larger screens, where it is a single row. */
+@media (min-width: 900px) {
+    .siteHeader {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+}
+
+/* ---------- Footer ---------- */
+
+.siteFooter {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.footerInner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footerInner p {
+    margin: 0;
+}
+
+.footerLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+}
+
+.footerLinks a {
+    color: var(--muted);
+}
+
+.footerLinks a:hover {
+    color: var(--text);
+}
+
+/* ---------- Buttons ---------- */
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    background: var(--accent);
+    color: var(--accent-text);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: var(--accent-text);
+}
+
+.button.secondary {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.button.secondary:hover {
+    background: var(--surface-2);
+}
+
+/* ---------- Shared bits ---------- */
+
+.section {
+    margin-top: 48px;
+}
+
+.sectionHeader {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 4px 16px;
+    margin-bottom: 16px;
+}
+
+.sectionHeader h2 {
+    margin: 0;
+}
+
+/* White panel behind product logos: the logos have white backgrounds, so they
+   look the same in light and dark mode. */
+.logoPlate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 20px;
+}
+
+.logoPlate img {
+    max-height: 72px;
+    width: auto;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 12px 0 0;
+    list-style: none;
+}
+
+.chips li {
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    font-size: 0.92rem;
+}
+
+/* ---------- Home: hero, product cards, game tiles ---------- */
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    margin: 8px 0 12px;
+}
+
+.cardGrid {
     display: grid;
-    row-gap: 10px;
-    padding: 10px 0;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-.gameDiv {
-    text-align: left;
-    background-color: #dddddd;
-    padding: 10px;
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
-.gameDiv > img.gameScreenshot {
-    width: 512px;
-    aspect-ratio: 512 / 300;
-    object-fit: contain;
-    padding-top: 5px;
+.card .logoPlate {
+    height: 120px;
+    border-bottom: 1px solid var(--border);
+}
+
+.cardBody {
+    flex: 1;
+    padding: 16px 20px 0;
+}
+
+.cardBody h3 {
+    margin: 0 0 6px;
+}
+
+.cardBody h3 a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.cardBody h3 a:hover {
+    color: var(--accent);
+}
+
+.cardBody p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.card .actions {
+    padding: 0 20px 20px;
+}
+
+.tileGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.tile {
+    display: block;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    color: var(--text);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.tile img {
+    display: block;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.tile span {
+    display: block;
+    padding: 10px 14px;
+}
+
+.tile:hover {
+    color: var(--accent);
+}
+
+.tile:hover img {
+    transform: scale(1.03);
+}
+
+/* ---------- Product pages ---------- */
+
+.product {
+    max-width: 760px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.product h1 {
+    margin: 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.product h1 .logoPlate {
+    padding: 32px 20px;
+}
+
+.product h1 .logoPlate img {
+    max-height: 110px;
+}
+
+.productBody {
+    padding: 8px 28px 28px;
+}
+
+.productBody .lead {
+    color: var(--text);
+}
+
+.productBody h2 {
+    font-size: 1.1rem;
+    margin: 24px 0 0;
+}
+
+/* ---------- Games page ---------- */
+
+.gameList {
+    display: grid;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.game {
+    display: grid;
+    gap: 20px 28px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+@media (min-width: 820px) {
+    .game {
+        grid-template-columns: 3fr 2fr;
+        align-items: start;
+    }
+}
+
+.gameMain {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--surface-2);
+}
+
+.thumbs {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* Bigger tap targets on phones. */
+@media (max-width: 520px) {
+    .thumbs {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.thumb {
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--surface-2);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.thumb img {
+    display: block;
+    width: 100%;
+}
+
+.thumb:hover {
+    opacity: 1;
+}
+
+.thumb[aria-pressed="true"] {
+    border-color: var(--accent);
+    opacity: 1;
+}
+
+.gameInfo h2 {
+    margin: 0 0 8px;
+}
+
+.gameInfo p {
+    margin: 0 0 10px;
+}
+
+.gameInfo .actions {
+    margin-top: 16px;
+}
+
+.callout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 24px;
+    margin-top: 32px;
+    padding: 20px 24px;
+    background: var(--accent-soft);
+    border-radius: var(--radius);
+}
+
+.callout p {
+    margin: 0;
+}
+
+.callout .actions {
+    margin: 0;
 }
