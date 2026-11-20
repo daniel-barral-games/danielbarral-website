@@ -17,11 +17,13 @@ It is a static site (plain HTML and CSS, no build step) hosted on GitHub Pages. 
 | `max-online-tools.html` | [Max Online Tools](https://www.maxonlinetools.com) (`/max-online-tools`) |
 | `style.css` | Styles shared by every page |
 | `img/` | Product logos, and game screenshots in `img/game-images/<game>/` |
+| `favicon.svg`, `apple-touch-icon.png` | Site icon (the PNG is a 180px render of the SVG) |
 
 The menu links leave off `.html` (for example `/games`). GitHub Pages serves `games.html` for those URLs. When you open a file straight from disk, those menu links don't work.
 
 ## Editing
 
-- **Add a game:** put its screenshots in `img/game-images/<game>/`, then copy one of the `<div class="gameDiv">` blocks in `games.html`.
+- **Add a game:** put its screenshots in `img/game-images/<game>/` as WebP, then copy one of the `<div class="gameDiv">` blocks in `games.html`. Give each image an `alt` describing it, and `loading="lazy"`. To convert a PNG: `ffmpeg -i shot.png -c:v libwebp -quality 90 shot.webp`.
+- **Each page's `<head>`** has a meta description and link-preview (Open Graph) tags with that page's URL. Update them when you change a page or add one.
 - **Add a page:** copy an existing page, and add its link to the `<div class="menu">` block in **every** page. The menu is repeated in each file.
 - **Preview locally:** run `python -m http.server` in the repo folder and open http://localhost:8000.
